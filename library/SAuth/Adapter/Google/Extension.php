@@ -3,7 +3,7 @@
 /**  
  * @see SAuth_Adapter_Abstract 
  */
-require_once 'Zend/OpenId/Extension.php';
+//require_once 'Zend/OpenId/Extension.php'; /* commented out for psr-0 compliance */
 
 class SAuth_Provider_Google_Extension extends Zend_OpenId_Extension {
     

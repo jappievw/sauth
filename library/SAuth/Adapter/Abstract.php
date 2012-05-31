@@ -1,10 +1,10 @@
 <?php
 
 /**  Zend_Session_Namespace */
-require_once 'Zend/Session/Namespace.php';
+//require_once 'Zend/Session/Namespace.php'; /* commented out for psr-0 compliance */
 
 /**  Zend_Http_Client */
-require_once 'Zend/Http/Client.php';
+//require_once 'Zend/Http/Client.php'; /* commented out for psr-0 compliance */
 
 /**
  * Abstract class for Sauth libraries
@@ -39,7 +39,7 @@ abstract class SAuth_Adapter_Abstract {
         
         $sessionKey = (string) $this->getSessionKey();
         if (empty($sessionKey)) {
-            require_once 'Zend/Auth/Adapter/Exception.php';
+//            require_once 'Zend/Auth/Adapter/Exception.php'; /* commented out for psr-0 compliance */
             throw new Zend_Auth_Adapter_Exception('Invalid auth storage key');
         }
         $this->_sessionStorage = new Zend_Session_Namespace($sessionKey);
@@ -145,7 +145,7 @@ abstract class SAuth_Adapter_Abstract {
         $body = (string) trim($body);
         
         /**  Zend_Json */
-        require_once 'Zend/Json.php';
+//        require_once 'Zend/Json.php'; /* commented out for psr-0 compliance */
         
         return Zend_Json::decode($body);
     }    

@@ -201,7 +201,7 @@ class Ak33m_OpenId_Consumer extends Zend_OpenId_Consumer
                   $_SESSION['zend_openid']['claimed_id'] = 'http://specs.openid.net/auth/2.0/identifier_select';
                 }
             } else {
-                require_once "Zend/Session/Namespace.php";
+//                require_once "Zend/Session/Namespace.php"; /* commented out for psr-0 compliance */
                 $this->_session = new Zend_Session_Namespace("zend_openid");
                 $this->_session->identity = $id;
                 $this->_session->claimed_id = $claimedId;

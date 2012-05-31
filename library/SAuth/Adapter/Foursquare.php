@@ -3,12 +3,12 @@
 /**  
  * @see SAuth_Adapter_Abstract 
  */
-require_once 'SAuth/Adapter/Abstract.php';
+//require_once 'SAuth/Adapter/Abstract.php'; /* commented out for psr-0 compliance */
 
 /**
  * @see Zend_Auth_Adapter_Interface
  */
-require_once 'Zend/Auth/Adapter/Interface.php';
+//require_once 'Zend/Auth/Adapter/Interface.php'; /* commented out for psr-0 compliance */
 
 /**
  * Authentication with foursquare
@@ -68,7 +68,7 @@ class SAuth_Adapter_Foursquare extends SAuth_Adapter_Abstract implements Zend_Au
         if (empty($authorizationUrl) || empty($clientId) || empty($clientSecret) || empty($redirectUrl) 
             || empty($accessTokenUrl)) {
                 
-            require_once 'Zend/Auth/Adapter/Exception.php';
+//            require_once 'Zend/Auth/Adapter/Exception.php'; /* commented out for psr-0 compliance */
             throw new Zend_Auth_Adapter_Exception('Foursquare auth configuration not specifed');
         }
         
