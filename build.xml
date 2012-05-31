@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="sauth" default="comment-require" basedir=".">
+	<property name="comment-require.path" location="${basedir}/library" />
+	
+	<target name="comment-require"
+	        description="Comment out all require_once's.">
+		<echo message="Commenting all require_once statements in path: ${comment-require.path}" />
+		
+		<replaceregexp byline="true">
+			<regexp pattern="^\s*require_once .*" />
+			<substitution expression="//\0 /* commented out for psr-0 compliance */" />
+			<fileset dir="${comment-require.path}" includes="**/*.php" />
+		</replaceregexp>
+	</target>
+</project>
