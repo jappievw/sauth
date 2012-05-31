@@ -3,22 +3,22 @@
 /**  
  * @see SAuth_Adapter_Abstract 
  */
-require_once 'SAuth/Adapter/Abstract.php';
+//require_once 'SAuth/Adapter/Abstract.php'; /* commented out for psr-0 compliance */
 
 /**
  * @see Zend_Auth_Adapter_Interface
  */
-require_once 'Zend/Auth/Adapter/Interface.php';
+//require_once 'Zend/Auth/Adapter/Interface.php'; /* commented out for psr-0 compliance */
 
 /**  
  * @see SAuth_Adapter_Google_Extension 
  */
-require_once 'SAuth/Adapter/Google/Extension.php';
+//require_once 'SAuth/Adapter/Google/Extension.php'; /* commented out for psr-0 compliance */
 
 /**  
  * @see Ak33m_OpenId_Consumer
  */
-require_once 'Ak33m/OpenId/Consumer.php';
+//require_once 'Ak33m/OpenId/Consumer.php'; /* commented out for psr-0 compliance */
 
 /**
  * Authentication with google
@@ -52,7 +52,7 @@ class SAuth_Adapter_Google extends SAuth_Adapter_Abstract implements Zend_Auth_A
         
         if (empty($config['id'])) {
             
-            require_once 'Zend/Auth/Adapter/Exception.php';
+//            require_once 'Zend/Auth/Adapter/Exception.php'; /* commented out for psr-0 compliance */
             throw new Zend_Auth_Adapter_Exception('Invalid google OpenId url');
         }
         

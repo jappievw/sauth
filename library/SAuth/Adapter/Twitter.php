@@ -3,17 +3,17 @@
 /**  
  * @see SAuth_Adapter_Abstract 
  */
-require_once 'SAuth/Adapter/Abstract.php';
+//require_once 'SAuth/Adapter/Abstract.php'; /* commented out for psr-0 compliance */
 
 /**
  * @see Zend_Auth_Adapter_Interface
  */
-require_once 'Zend/Auth/Adapter/Interface.php';
+//require_once 'Zend/Auth/Adapter/Interface.php'; /* commented out for psr-0 compliance */
 
 /**  
  * @see Zend_Oauth_Consumer 
  */
-require_once 'Zend/Oauth/Consumer.php';
+//require_once 'Zend/Oauth/Consumer.php'; /* commented out for psr-0 compliance */
 
 
 /**
@@ -53,7 +53,7 @@ class SAuth_Adapter_Twitter extends SAuth_Adapter_Abstract implements Zend_Auth_
         if (empty($config['consumerKey']) || empty($config['consumerSecret']) || empty($config['userAuthorizationUrl']) 
             || empty($config['accessTokenUrl']) || empty($config['callbackUrl'])) {
                 
-            require_once 'Zend/Auth/Adapter/Exception.php';
+//            require_once 'Zend/Auth/Adapter/Exception.php'; /* commented out for psr-0 compliance */
             throw new Zend_Auth_Adapter_Exception('Twitter auth configuration not specifed');
         }
         
